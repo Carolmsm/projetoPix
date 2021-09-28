@@ -1,13 +1,16 @@
 package matera.bootcamp.projetoPix.domain.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.Data;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Data
 @Entity
 public class ContaCorrente {
+
     @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -16,7 +19,7 @@ public class ContaCorrente {
     @Column(nullable = false)
     private Long conta;
 
-    @Column(precision = 2, scale = 2, nullable = false)
+    @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal saldo;
 
 

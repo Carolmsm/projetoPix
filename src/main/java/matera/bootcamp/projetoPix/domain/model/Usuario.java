@@ -3,24 +3,24 @@ package matera.bootcamp.projetoPix.domain.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 @Data
 @Entity
-public class ContaCorrente {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private Long agencia;
+    private String nome;
 
     @Column(nullable = false)
-    private Long conta;
+    private String sobrenome;
 
-    @Column(precision = 10, scale = 2, nullable = false)
-    private BigDecimal saldo;
+    @OneToOne(optional = false)
+    private ContaCorrente contaCorrente;
+
 
 
 }

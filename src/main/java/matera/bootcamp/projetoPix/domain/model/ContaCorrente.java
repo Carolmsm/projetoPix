@@ -1,5 +1,6 @@
 package matera.bootcamp.projetoPix.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,13 +21,13 @@ public class ContaCorrente {
     @Column(nullable = false)
     private Long conta;
 
-    @Column(precision = 2, scale = 2, nullable = false)
+    @Column(precision = 10, scale = 2, nullable = false)
     private BigDecimal saldo = new BigDecimal("0.00");
 
-    @OneToOne(mappedBy = "")
+   // @OneToMany
+   // private List<Chave> chaves;
+
+    @OneToOne(mappedBy = "contaCorrente")
+    @JsonIgnore
     private Usuario usuario;
-
-    @OneToMany
-    private List<Chave> chaves;
-
 }

@@ -14,7 +14,7 @@ public class Chave {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private TipoChave tipochave;
+    private TipoChave tipoChave;
 
     @Column(nullable = false)
     private String valor;

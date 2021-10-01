@@ -20,6 +20,7 @@ public class UsuarioCrudService {
     }
 
     public Page<Usuario> buscarPaginado(Pageable pageable) {
+
         return  usuarioRepository.findAll(pageable);
     }
 

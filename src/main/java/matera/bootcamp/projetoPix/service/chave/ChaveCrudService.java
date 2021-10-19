@@ -1,9 +1,10 @@
+
 package matera.bootcamp.projetoPix.service.chave;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.projetoPix.domain.model.Chave;
-import matera.bootcamp.projetoPix.repository.ChaveRepository;
-import matera.bootcamp.projetoPix.repository.ContaCorrenteRepository;
+import matera.bootcamp.projetoPix.domain.repository.ChaveRepository;
+import matera.bootcamp.projetoPix.domain.repository.ContaCorrenteRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,7 +20,7 @@ public class ChaveCrudService {
             throw  new RuntimeException(("Chave precisa de uma conta corrente"));
 
         var contaCorrente = contaCorrenteRepository
-        .findById((chave.getContaCorrente().getId()))
+                .findById((chave.getContaCorrente().getId()))
                 .orElseThrow(() -> new RuntimeException("Conta corrente não encontrada"));
 
                 chave.setContaCorrente(contaCorrente);

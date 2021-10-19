@@ -1,4 +1,4 @@
-package matera.bootcamp.projetoPix.repository;
+package matera.bootcamp.projetoPix.domain.repository;
 
 import matera.bootcamp.projetoPix.domain.model.ContaCorrente;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,4 +9,8 @@ public interface ContaCorrenteRepository extends JpaRepository<ContaCorrente, Lo
 
 
     Optional<ContaCorrente> findByUsuarioId(Long id);
+
+
+    Optional<ContaCorrente> findByAgenciaAndConta
+            (Long agencia, Long conta);
 }

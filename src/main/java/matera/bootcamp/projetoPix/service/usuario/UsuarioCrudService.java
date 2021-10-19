@@ -2,7 +2,7 @@ package matera.bootcamp.projetoPix.service.usuario;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.projetoPix.domain.model.Usuario;
-import matera.bootcamp.projetoPix.repository.UsuarioRepository;
+import matera.bootcamp.projetoPix.domain.repository.UsuarioRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

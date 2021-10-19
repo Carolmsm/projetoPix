@@ -1,4 +1,4 @@
-package matera.bootcamp.projetoPix.rest.status.usuario;
+package matera.bootcamp.projetoPix.rest.usuario;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.projetoPix.domain.model.Chave;
@@ -22,8 +22,9 @@ public class UsuarioConsultaChaveController {
         var chavesDoUsuario = consultaChaveUsuarioService
                 .consultarPorIdDeUsuario(id);
 
-        return ResponseEntity
+        return  ResponseEntity
                 .status(HttpStatus.OK)
                 .body(chavesDoUsuario);
     }
+
 }

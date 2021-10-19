@@ -1,9 +1,9 @@
-package matera.bootcamp.projetoPix.service.usuario;
 
+package matera.bootcamp.projetoPix.service.usuario;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.projetoPix.domain.model.Chave;
-import matera.bootcamp.projetoPix.repository.ChaveRepository;
+import matera.bootcamp.projetoPix.domain.repository.ChaveRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

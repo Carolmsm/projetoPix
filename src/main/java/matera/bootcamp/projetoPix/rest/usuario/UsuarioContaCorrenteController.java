@@ -1,4 +1,4 @@
-package matera.bootcamp.projetoPix.rest.status.usuario;
+package matera.bootcamp.projetoPix.rest.usuario;
 
 import lombok.RequiredArgsConstructor;
 import matera.bootcamp.projetoPix.domain.model.ContaCorrente;
@@ -18,15 +18,12 @@ public class UsuarioContaCorrenteController {
     @GetMapping("/api/v1/usuario/{id}/conta")
     public ResponseEntity<ContaCorrente> buscarPorUsuario(@PathVariable Long id) {
 
-
-
         var contaConsultada = consultaContaUsuarioService
                 .consultarContaPorUsuarioId(id);
 
-        return  ResponseEntity
+        return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(contaConsultada);
-
     }
 
 }

@@ -3,16 +3,20 @@ package matera.bootcamp.projetoPix.domain.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @Entity
 public class ContaCorrente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   //
+   ////    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(nullable = false)

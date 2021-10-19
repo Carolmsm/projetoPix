@@ -1,4 +1,4 @@
-package matera.bootcamp.projetoPix.repository;
+package matera.bootcamp.projetoPix.domain.repository;
 
 import matera.bootcamp.projetoPix.domain.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;

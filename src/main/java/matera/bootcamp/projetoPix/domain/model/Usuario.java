@@ -18,6 +18,9 @@ public class Usuario {
     @Column(nullable = false)
     private String sobrenome;
 
+    @Column(nullable = false)
+    private String cpf;
+
     @OneToOne(optional = false)
     private ContaCorrente contaCorrente;
 
